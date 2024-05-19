@@ -1,11 +1,12 @@
 import cv2
 import os
+import time
 
-file = "img"
+file = "Dataset/img"
 files_in_folder = os.listdir(file)
 
 
-for i in range (2500, 3840+1):
+for i in range (1, 3840+1):
 
     if f"{i}.jpg" in files_in_folder:
         img = cv2.imread(f"{file}\\{i}.jpg")
@@ -17,3 +18,4 @@ for i in range (2500, 3840+1):
 
     cv2.imshow("img", img)
     cv2.waitKey(1)
+    time.sleep(0.1)
